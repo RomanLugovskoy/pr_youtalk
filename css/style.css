@@ -129,6 +129,10 @@ body {
 	opacity: .7;
 	letter-spacing: 0.25px;
 }
+.header__breadcrumbs-link:hover {
+	opacity: 1;
+	transition: opacity .2s ease;
+}
 .header__breadcrumbs-item:not(:last-child) {
 	background-image: url(../img/header/right-arrow.svg);
 	background-position: right center;
