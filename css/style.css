@@ -15,7 +15,6 @@
 .header__nav {
 }
 .header__list {
-	list-style-type: none;
 }
 .header__item {
 }
@@ -30,7 +29,6 @@
 .header__breadcrumbs {
 }
 .header__breadcrumbs-list {
-	list-style-type: none;
 }
 .header__breadcrumbs-item {
 }
