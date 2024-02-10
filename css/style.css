@@ -67,10 +67,6 @@ body {
 	min-height: 76px;
 	border-bottom: 2px solid #eff2f2;
 }
-.header__logo {
-}
-.header__nav {
-}
 .header__list {
 	display: flex;
 	gap: 30px;
@@ -114,8 +110,6 @@ body {
 }
 .header__bottom {
 	padding: 16px 0;
-}
-.header__breadcrumbs {
 }
 .header__breadcrumbs-list {
 	display: flex;
