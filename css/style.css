@@ -198,6 +198,7 @@ body {
 }
 .hero__card {
 	grid-template-rows: minmax(260px, 1fr) minmax(240px, 1fr);
+	align-items: stretch;
 }
 .card {
 	display: grid;
@@ -227,15 +228,15 @@ body {
 .card__img {
 	border-top-left-radius: 16px;
 	border-top-right-radius: 16px;
-	background-size: contain;
-	background-position: left top;
+	background-size: cover;
+	background-position: center center;
 	background-repeat: no-repeat;
 }
 .eggs {
-	background-image: url(../img/main/card/eggs.png);
+	background-image: url(../img/main/card/hero/eggs.png);
 }
 .run {
-	background-image: url(../img/main/card/run.png);
+	background-image: url(../img/main/card/hero/run.png);
 }
 .card__info {
 	display: flex;
@@ -289,25 +290,22 @@ body {
 	grid-template-rows: 260px 1fr;
 }
 .girl {
-	background-image: url(../img/main/card/girl.png);
+	background-image: url(../img/main/card/catalog/girl.png);
 }
 .pool {
-	background-image: url(../img/main/card/pool.png);
+	background-image: url(../img/main/card/catalog/pool.png);
 }
 .evil {
-	background-image: url(../img/main/card/evil.png);
+	background-image: url(../img/main/card/catalog/evil.png);
 }
 .grand {
-	background-image: url(../img/main/card/grand.png);
+	background-image: url(../img/main/card/catalog/grand.png);
 }
 .rams {
-	background-image: url(../img/main/card/rams.png);
+	background-image: url(../img/main/card/catalog/rams.png);
 }
 .talk {
-	background-image: url(../img/main/card/talk.png);
-}
-.run {
-	background-image: url(../img/main/card/run.png);
+	background-image: url(../img/main/card/catalog/talk.png);
 }
 
 /* MAIN BTN */
@@ -467,4 +465,43 @@ body {
 	font-weight: normal;
 	line-height: 20px;
 	color: rgba(255, 255, 255, .7);
+}
+
+/* MEDIA */
+@media screen and (max-width: 1200px) {
+	.container {
+		width: calc(100vw - 64px);
+	}
+	.filters {
+		flex-wrap: wrap;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.header__list {
+		gap: 16px;
+	}
+	.eggs {
+		background-image: url(../img/main/card/hero/eggs1024.png);
+	}
+	.run {
+		background-image: url(../img/main/card/hero/run1024.png);
+	}
+	.girl {
+		background-image: url(../img/main/card/catalog/girl1024.png);
+	}
+	.pool {
+		background-image: url(../img/main/card/catalog/pool1024.png);
+	}
+	.evil {
+		background-image: url(../img/main/card/catalog/evil1024.png);
+	}
+	.grand {
+		background-image: url(../img/main/card/catalog/grand1024.png);
+	}
+	.rams {
+		background-image: url(../img/main/card/catalog/rams1024.png);
+	}
+	.talk {
+		background-image: url(../img/main/card/catalog/talk1024.png);
+	}
 }
