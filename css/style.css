@@ -60,10 +60,10 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 14px 0 12px 0;
-
 }
 .header__top {
+	display: flex;
+	align-items: center;
 	min-height: 76px;
 	border-bottom: 2px solid #eff2f2;
 }
@@ -107,6 +107,7 @@ body {
 }
 .header__burger {
 	display: none;
+	background-color: transparent;
 }
 .header__bottom {
 	padding: 16px 0;
@@ -163,6 +164,7 @@ body {
 	border: 1px solid #c1c5cd;
 	border-radius: 24px;
 	background-color: transparent;
+	white-space: nowrap;
 	font-size: 14px;
 	line-height: 20px;
 	font-weight: 600;
@@ -241,8 +243,9 @@ body {
 .card__info {
 	display: flex;
 	flex-direction: column;
+	background-color: #fff;
 	margin-top: -1px;
-	padding: 16px;
+	padding: 15px;
 	border: 1px solid #dedede;
 	border-bottom-right-radius: 16px;
 	border-bottom-left-radius: 16px;
@@ -273,6 +276,7 @@ body {
 	font-size: 12px;
 	line-height: 18px;
 	letter-spacing: 0.25px;
+	margin-top: 14px;
 }
 
 /* SECTION CATALOG */
@@ -468,6 +472,14 @@ body {
 }
 
 /* MEDIA */
+@media screen and (min-width: 1200px) {
+	body {
+		background-image: url(../img/Vector@2x.svg);
+		background-size: contain;
+		background-position: center 400px;
+		background-repeat: no-repeat;
+	}
+}
 @media screen and (max-width: 1200px) {
 	.container {
 		width: calc(100vw - 64px);
@@ -477,6 +489,9 @@ body {
 	}
 }
 @media screen and (max-width: 1024px) {
+	.header {
+    	margin-bottom: 24px;
+	}
 	.header__list {
 		gap: 16px;
 	}
@@ -503,5 +518,177 @@ body {
 	}
 	.talk {
 		background-image: url(../img/main/card/catalog/talk1024.png);
+	}
+	.catalog {
+		grid-template-rows: minmax(458px, 1fr);
+		grid-auto-rows: minmax(458px, 1fr);
+	}
+	.catalog__card {
+		grid-template-rows: 206px minmax(253px, 1fr);
+	}
+	.main__btn {
+		margin: 35px 0 60px;
+	}
+	.footer__nav {
+    gap: 30px;
+	flex-basis: 281px;
+}
+}
+@media screen and (max-width: 768px) {
+	.container {
+		width: calc(100vw - 40px);
+	}
+	.header__nav {
+		display: none;
+	}
+	.header__btn {
+		display: none;
+	}
+	.header__burger {
+		display: block;
+	}
+	.hero {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: minmax(599px, 1fr);
+		grid-auto-rows: minmax(599px, 1fr);
+		grid-auto-flow: row;
+		gap: 24px;
+	}
+	.hero__card {
+		grid-template-rows: 404px minmax(196px, 1fr);
+		align-items: stretch;
+	}
+	.catalog {
+		grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
+	}
+	.catalog__card {
+		grid-template-rows: 206px minmax(241px, 1fr);
+	}
+	.main__btn {
+		margin: 33px 0 55px;
+	}
+	.footer__container {
+		gap: 25px;
+	}
+	.footer__top {
+		flex-wrap: wrap;
+		gap: 26px;
+	}
+	.footer__nav {
+		flex-basis: 250px;
+	}
+	.footer__form-block {
+		flex-basis: 450px;
+	}
+	.footer {
+		min-height: auto;
+	}
+}
+@media screen and (max-width: 414px) {
+	.header {
+    	margin-bottom: 16px;
+	}
+	.main__heading {
+		font-size: 32px;
+		line-height: 40px;
+		margin-bottom: 24px;
+	}
+	.filters {
+		flex-wrap: nowrap;
+		overflow-x: scroll;
+	}
+	.main__filters {
+		margin-bottom: 16px;
+	}
+	.hero {
+		grid-template-rows: minmax(466px, 1fr);
+		grid-auto-rows: minmax(466px, 1fr);
+		gap: 16px;
+	}
+	.hero__card {
+		grid-template-rows: 206px minmax(196px, 1fr);
+		align-items: stretch;
+	}
+	.main__hero {
+		margin-bottom: 16px;
+	}
+	.catalog__card {
+		display: none;
+	}
+	.catalog__card:nth-child(-n+2) {
+		display: grid;
+	}
+	.catalog {
+		gap: 16px;
+	}
+	.catalog__card {
+		grid-template-rows: 206px minmax(260px, 1fr);
+	}
+
+	.main__btn {
+		margin: 28px 0 59px;
+	}
+	.footer__container {
+		width: calc(100vw - 26px);
+		padding: 35px 0;
+	}
+	.footer__nav {
+		flex-basis: 100%;
+		justify-content: space-between;
+	}
+	.footer__media {
+		gap: 20px;
+	}
+	.footer__bottom {
+		flex-direction: column;
+		padding-top: 20px;
+		gap: 20px;
+		align-items: start;
+	}
+}
+@media screen and (max-width: 320px) {
+	.container {
+		width: calc(100vw - 32px);
+	}
+	.header {
+		margin-bottom: 2px;
+	}
+	.header__top {
+		min-height: 56px;
+	}
+	.header__bottom {
+		padding: 24px 0 22px;
+	}
+	.main__heading {
+		font-size: 24px;
+		line-height: 32px;
+	}
+	.main__filters {
+		margin-bottom: 24px;
+	}
+	.catalog {
+		grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+	}
+	.footer__container {
+		width: calc(100vw - 36px);
+	}
+	.footer__top {
+		gap: 23px;
+	}
+	.footer__form-block {
+		flex-basis: 100%;
+	}
+	.form__input-container {
+		position: relative;
+		display: flex;
+		width: auto;
+		min-height: 48px;
+	}
+	.form__input {
+		width: 100%;
+	}
+	.form__btn {
+		display: none;
 	}
 }
