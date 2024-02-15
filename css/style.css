@@ -711,6 +711,9 @@ body {
 .publication-main__content {
 }
 .publication-content {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
 }
 .publication-content__section {
 }
@@ -719,7 +722,7 @@ body {
 	flex-direction: column;
 	gap: 16px;
 }
-.publication-content__heading {
+.publication-main__heading {
 	margin: 8px 0;
 	font-size: 24px;
 	line-height: 32px;
@@ -797,4 +800,30 @@ body {
 	line-height: 24px;
 	text-decoration: underline;
 	color: #333333;
+}
+/* OTHER SECTIONS */
+.publication-content__section {
+}
+.publication-section {
+	display: flex;
+	flex-direction: column;
+}
+.publication-section__heading {
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+.publication-section__text {
+}
+.publication-section__text:not(:last-child) {
+	margin-bottom: 8px;
+}
+.publication-section__comment {
+}
+.comment {
+}
+.comment__text {
+}
+.comment__author {
 }
